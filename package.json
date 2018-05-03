@@ -7,5 +7,21 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glenpgd/chatigloo-backtend.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/glenpgd/chatigloo-backtend/issues"
+  },
+  "homepage": "https://github.com/glenpgd/chatigloo-backtend#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "knex": "^0.14.6",
+    "morgan": "^1.9.0"
+  }
 }
