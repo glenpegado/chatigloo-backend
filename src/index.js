@@ -42,8 +42,17 @@ app.wss.on('connection', (connection) => {
 
   console.log('New client connected with userId:', userId);
 
+
+  connection.on('message', (message) => {
+
+    console.log('message from: ', message)
+
+  })
+
   connection.on('close', () => {
-    console.log('client disconnected');
+    console.log('client with Id', userId, 'is disconnected');
+
+      clients = clients.filter((client) => client.userId !== userId)
   })
 })
 
@@ -58,6 +67,26 @@ app.get('/api/all_connections', (req, res, next) => {
     people: clients
   })
 })
+
+
+setInterval(() => {
+
+  console.log(`there are ${clients.length} people in the connection`)
+
+  if(clients.length > 0){
+
+      clients.forEach((client) => {
+
+        // console.log('client Id', client.userId)
+
+        const msg = `Hey Id ${client.userId}: you got a new message from the sever`
+
+        client.ws.send(msg)
+
+      })
+  }
+  //executed every 3 seconds
+}, 3000)
 
 app.server.listen(process.env.PORT || PORT, () => {
     console.log(`App is running on port ${app.server.address().port}`)

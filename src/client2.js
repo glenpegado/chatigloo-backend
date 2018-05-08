@@ -6,7 +6,10 @@ ws.on('open', () => {
   console.log('successful connected client 2 to server');
 
   // send new message from client to Server
-  ws.send('hello server my name is client2')
+  ws.send('hello server my name is client 2')
+
+  ws.on('message', (message) => {
+      console.log(message);
+  })
 
   })
-})
