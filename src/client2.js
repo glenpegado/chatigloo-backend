@@ -11,5 +11,4 @@ ws.on('open', () => {
   ws.on('message', (message) => {
       console.log(message);
   })
-
   })
