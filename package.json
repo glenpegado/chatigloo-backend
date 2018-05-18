@@ -1,27 +1,18 @@
 {
-  "name": "chatigloo-backend",
+  "name": "src",
   "version": "1.0.0",
-  "description": "chatingloo-backend for chatting with users",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/glenpgd/chatigloo-backtend.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
-  "bugs": {
-    "url": "https://github.com/glenpgd/chatigloo-backtend/issues"
-  },
-  "homepage": "https://github.com/glenpgd/chatigloo-backtend#readme",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "axios": "^0.18.0",
     "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "knex": "^0.14.6",
-    "morgan": "^1.9.0"
+    "nconf": "^0.10.0"
   }
 }
