@@ -380,7 +380,7 @@ export default class Connection {
                 this.connections = this.connections.remove(socketId);
 
                 if (userId) {
-                    // find all socket clients matching with userId
+                    // now find all socket clients matching with userId
 
                     const userConnections = this.connections.filter((con) => _.toString(_.get(con, 'userId')) === userId);
                     if (userConnections.size === 0) {

@@ -44,7 +44,7 @@ new Database().connect().then((db) => {
 	console.log("Successful connected to database.")
 
 	app.db = db;
-	
+
 }).catch((err) => {
 
 
