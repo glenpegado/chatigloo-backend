@@ -26,7 +26,6 @@ app.use(bodyParser.json({
 }));
 
 
-
 app.wss = new Server({
 	server: app.server
 });
@@ -56,9 +55,6 @@ new Database().connect().then((db) => {
 
 app.models = new Model(app);
 app.routers = new AppRouter(app);
-
-
-
 
 
 app.server.listen(process.env.PORT || PORT, () => {

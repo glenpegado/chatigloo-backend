@@ -36,7 +36,7 @@ export default class Token{
 
 			this.load(id).then((token) => {
 
-			
+
 				const userId = `${token.userId}`
 
 				this.app.models.user.load(userId).then((user) => {
@@ -100,7 +100,7 @@ export default class Token{
 
 
 		const idObject = new ObjectID(id);
-	
+
 		const query = {_id: idObject}
 		this.app.db.collection('tokens').findOne(query, (err, result) => {
 
@@ -116,22 +116,16 @@ export default class Token{
 	}
 
 	create(userId){
-
 		const token = {
 			userId: userId,
 			created: new Date(),
 		}
 
-		
+
 		return new Promise((resolve, reject) => {
-
-
 			this.app.db.collection('tokens').insertOne(token, (err, info) => {
 				return err ? reject(err) : resolve(token);
 			})
-
-
-
 		})
 	}
 

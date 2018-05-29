@@ -1,3 +1,4 @@
+//Email
 export const isEmail = (emaill) => {
 
 
@@ -10,6 +11,6 @@ export const toString = (id = "") => {
 
 
 	return `${id}`;
-		
+
 
 }
